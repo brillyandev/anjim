@@ -111,7 +111,7 @@ const startServer = async (from) => {
             console.log('~>',color('[INFO] Delete kicked from group'));
           });
         cron.schedule('* * * * *', () =>  {
-        const obj = [{id: "6281297980063@c.us", msg: 1}]
+        const obj = [{id: "6281342077268@c.us", msg: 1}]
         msgLimit = obj
         fs.writeFileSync('./settings/msgLimit.json', JSON.stringify(obj))
         });
@@ -122,7 +122,7 @@ const startServer = async (from) => {
             }
         console.log(color.green('~> [INFO] Deleted all chats'));
         });
-        console.log('~>',color('[DEV] ItzNgga BOT!'))
+        console.log('~>',color('[DEV] AZ WhatsApp Bot!'))
         console.log('~>',color('[SERVER] Server Started!'))
         //CALLING the #bot restart function
         if(isRestart){restartAwal(client);}
@@ -160,7 +160,7 @@ const startServer = async (from) => {
                             })
                         })
                     }else{
-                        if(!chat.isReadOnly)client.sendText(chat.id, 'Halo semuanya, saya adalah xYz BOT. gunakan '+prefix+'help untuk menggunakan saya :D')
+                        if(!chat.isReadOnly)client.sendText(chat.id, 'Halo semuanya, saya adalah AZ WhatsApp Bot. gunakan '+prefix+'help untuk menggunakan saya :D')
                     }
                 }
             }else{
@@ -460,7 +460,7 @@ const startServer = async (from) => {
                                 if(!args.lenght >= 2) return
                                 axios.get(`http://beta.moe.team/api/iplookup?apikey=McJNTmAfdBmO1hYk7gREmVBmtrxiywJtqN3uI7ZRNlMK7MiMwLVUVUQUzAtt6qrv&ip=${args[1]}`).then((res) => {
                                     let hs = res.data.result
-                                    client.sendText(from, `╭───[ Hasil Tracking IP ]───\n├ Info dibawah mungkin tidak akurat\n├ IP : ${hs.query}\n├ Hostname : ${hs.asname}\n├ ASN : ${hs.as}\n├ ISP : ${hs.isp}\n├ Latitude : ${hs.lat}\n├ Longitude : ${hs.lon}\n├ Benua : ${hs.continent}\n├ Negara : ${hs.country}\n├ Provinsi : ${hs.region}\n├ Kota : ${hs.city}\n├ Map : https://www.google.com/maps/search/?api=1&query=${hs.lat},${hs.lon}\n╰───[ xYz WhatssApp Bot ]───`);
+                                    client.sendText(from, `╭───[ Hasil Tracking IP ]───\n├ Info dibawah mungkin tidak akurat\n├ IP : ${hs.query}\n├ Hostname : ${hs.asname}\n├ ASN : ${hs.as}\n├ ISP : ${hs.isp}\n├ Latitude : ${hs.lat}\n├ Longitude : ${hs.lon}\n├ Benua : ${hs.continent}\n├ Negara : ${hs.country}\n├ Provinsi : ${hs.region}\n├ Kota : ${hs.city}\n├ Map : https://www.google.com/maps/search/?api=1&query=${hs.lat},${hs.lon}\n╰───[ AZ WhatsApp Bot ]───`);
                                 }).catch(err => {
                                     client.sendText(from,`Alamat ip tidak ada atau tidak valid`)
                                 })
@@ -526,7 +526,7 @@ const startServer = async (from) => {
                                 if(isLimit(serial)) return
                                 if(!args.lenght >= 2) return
                                 let qrcodes = body.slice(8)
-                                await client.sendFileFromUrl(from, `https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=${qrcodes}`, 'gambar.png', 'Process sukses! #xYz BOT')
+                                await client.sendFileFromUrl(from, `https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=${qrcodes}`, 'gambar.png', 'Process sukses! #AZ BOT')
                                 limitAdd(serial)
                                 break
                             case prefix+'igstalk':
@@ -576,7 +576,7 @@ const startServer = async (from) => {
                                     } else {
                                         prvate = 'Tidak';
                                     }
-                                    let hasil = `╭──[ Hasil Stalk IG ]───\n├ Username : ${username}\n├ Nama : ${full_name}\n├ Bio : ${biography}\n├ Jumlah Post : ${post}\n├ Mengikuti : ${followed}\n├ Pengikut : ${followers}\n├ Akun Private?  : ${prvate}\n╰──[ xYz WhatsApp Bot ]───`;
+                                    let hasil = `╭──[ Hasil Stalk IG ]───\n├ Username : ${username}\n├ Nama : ${full_name}\n├ Bio : ${biography}\n├ Jumlah Post : ${post}\n├ Mengikuti : ${followed}\n├ Pengikut : ${followers}\n├ Akun Private?  : ${prvate}\n╰──[ AZ WhatsApp Bot ]───`;
                                     client.sendText(from, hasil);
                                     limitAdd(serial);
                                     browser.close();
@@ -609,7 +609,7 @@ const startServer = async (from) => {
                                     client.sendPtt(from, './gtts/gtts.mp3')
                                 })
                                 break
-                            case '@6289654471026':
+                            case 'bot':
                                 await client.sendTextWithMentions(chatId, `Hai @${serial.match(/\d+/g)}, ada yang bisa saya bantu? ${prefix}help untuk melihat list perintah :D`)
                                 break
                             case prefix+'lang':
@@ -654,7 +654,7 @@ const startServer = async (from) => {
                                             Object.keys(track).reverse().forEach(function (i) {
                                                 hasil += `\n├────────────────\n├> Tanggal   : ${track[i].date}\n├> Deskripsi : ${track[i].desc}\n├> Status    : ${track[i].status}\n├────────────────`;
                                             });
-                                            hasil += '\n╰──[ xYz WhatsApp Bot ]───';
+                                            hasil += '\n╰──[ AZ WhatsApp Bot ]───';
                                             client.sendText(from,hasil);
                                             limitAdd(serial);
                                         } else {
@@ -717,7 +717,7 @@ const startServer = async (from) => {
                                 axios.get('https://data.bmkg.go.id/autogempa.xml').then((res) => {
                                     parseString(res.data, function (err, result) {
                                         result = result.Infogempa.gempa[0];
-                                        let hasils = `╭──[ Info Gempa BMKG Terbaru ]───\n├ Tanggal : ${result.Tanggal}\n├ Jam : ${result.Jam}\n├ Magnitudo : ${result.Magnitude}\n├ Kedalaman : ${result.Kedalaman}\n├ Lintang : ${result.Lintang}\n├ Bujur : ${result.Bujur}\n├ Lokasi 1 : ${result.Wilayah1}\n├ Lokasi 2 : ${result.Wilayah2}\n├ Lokasi 3 : ${result.Wilayah3}\n├ Lokasi 4 : ${result.Wilayah4}\n├ Lokasi 5 : ${result.Wilayah5}\n├ Potensi : ${result.Potensi}\n╰──[ xYz WhatsApp Bot ]───`;
+                                        let hasils = `╭──[ Info Gempa BMKG Terbaru ]───\n├ Tanggal : ${result.Tanggal}\n├ Jam : ${result.Jam}\n├ Magnitudo : ${result.Magnitude}\n├ Kedalaman : ${result.Kedalaman}\n├ Lintang : ${result.Lintang}\n├ Bujur : ${result.Bujur}\n├ Lokasi 1 : ${result.Wilayah1}\n├ Lokasi 2 : ${result.Wilayah2}\n├ Lokasi 3 : ${result.Wilayah3}\n├ Lokasi 4 : ${result.Wilayah4}\n├ Lokasi 5 : ${result.Wilayah5}\n├ Potensi : ${result.Potensi}\n╰──[ AZ WhatsApp Bot ]───`;
                                         client.sendText(from, hasils)
                                         limitAdd(serial)
                                 });})
@@ -868,7 +868,7 @@ const startServer = async (from) => {
                                 await tiktok(url)
                                 .then((videoMeta) => {
                                     const filename = videoMeta.authorMeta.name + '.mp4'
-                                    const caps = `\nUsername: ${videoMeta.authorMeta.name} \nMusic: ${videoMeta.musicMeta.musicName} \nView: ${videoMeta.playCount.toLocaleString()} \nLike: ${videoMeta.diggCount.toLocaleString()} \nComment: ${videoMeta.commentCount.toLocaleString()} \nShare: ${videoMeta.shareCount.toLocaleString()} \nCaption: ${videoMeta.text.trim() ? videoMeta.text : '-'} \n\nProcessing Sukses #xYz BOT!`
+                                    const caps = `\nUsername: ${videoMeta.authorMeta.name} \nMusic: ${videoMeta.musicMeta.musicName} \nView: ${videoMeta.playCount.toLocaleString()} \nLike: ${videoMeta.diggCount.toLocaleString()} \nComment: ${videoMeta.commentCount.toLocaleString()} \nShare: ${videoMeta.shareCount.toLocaleString()} \nCaption: ${videoMeta.text.trim() ? videoMeta.text : '-'} \n\nProcessing Sukses #AZ BOT!`
                                     // client.sendFileFromUrl(from,videoMeta.url, filename, videoMeta.NoWaterMark ? caps : `⚠ Video tanpa watermark tidak tersedia. \n\n${caps}`)
                                     limitAdd(serial)
                                     client.sendFile(from,videoMeta.urlbase64, filename, videoMeta.NoWaterMark ? caps : `⚠ Video tanpa watermark tidak tersedia. \n\n${caps}`)
@@ -883,7 +883,7 @@ const startServer = async (from) => {
                                 client.sendText(from, license)
                                 break
                             case prefix+'creator':
-                                client.sendContact(chatId, `6281297980063@c.us`)
+                                client.sendContact(chatId, `6281342077268@c.us`)
                                 break
                             case prefix+'ig':
                             case prefix+'instagram':
@@ -942,7 +942,7 @@ const startServer = async (from) => {
                                                 shorts.push(links[i])
                                             }
                                             const link = shorts.map((x) => `${x.resolution} Quality: ${x.short}`)
-                                            const caption = `Text: ${title} \n\nLink Download: \n${link.join('\n')} \n\nProcessing Sukses #xYz BOT!`
+                                            const caption = `Text: ${title} \n\nLink Download: \n${link.join('\n')} \n\nProcessing Sukses #AZ BOT!`
                                             client.sendFileFromUrl(from,thumbnail, 'videos.jpg', caption )
                                             limitAdd(serial)
                                         } catch (err) {
@@ -978,7 +978,7 @@ const startServer = async (from) => {
                                                 shorts.push(links[i])
                                             }
                                             const link = shorts.map((x) => `${x.resolution} Quality: ${x.short}`)
-                                            const caption = `Text: ${title} \nLink Download: \n${link.join('\n')} \n\nProcessing Sukses #xYz BOT!`
+                                            const caption = `Text: ${title} \nLink Download: \n${link.join('\n')} \n\nProcessing Sukses #AZ BOT!`
                                             client.sendFileFromUrl(from,thumbnail, 'videos.jpg', caption )
                                             limitAdd(serial)
                                         } catch (err) {
@@ -1014,7 +1014,7 @@ const startServer = async (from) => {
                                             shorts.push(links[i])
                                         }
                                         const link = shorts.map((x) => `${x.resolution} Quality: ${x.short}`)
-                                        const caption = `Text: ${title} \nLink Download: \n${link.join('\n')} \n\nProcessing Sukses #xYz BOT!`
+                                        const caption = `Text: ${title} \nLink Download: \n${link.join('\n')} \n\nProcessing Sukses #AZ BOT!`
                                         client.sendFileFromUrl(from,thumbnail, 'videos.jpg', caption )
                                         limitAdd(serial)
                                     } catch (err) {
@@ -1051,7 +1051,7 @@ const startServer = async (from) => {
                                             shorts.push(links[i])
                                         }
                                         const link = shorts.map((x) => `${x.resolution} Quality: ${x.short}`)
-                                        const caption = `Tittle: ${title} \nLink Download: \n${link.join('\n')} \n\nProcessing Sukses #xYz BOT!`
+                                        const caption = `Tittle: ${title} \nLink Download: \n${link.join('\n')} \n\nProcessing Sukses #AZ BOT!`
                                         client.sendFileFromUrl(from,thumbnail, 'videos.jpg', caption )
                                         limitAdd(serial)
                                     } catch (err) {
@@ -1073,7 +1073,7 @@ const startServer = async (from) => {
                                     // console.log('Shortlink: '+ shortener)
                                     url['short'] = shortener
                                     short.push(url)
-                                    const caption = `Link: ${shortener}\n\nProcessing Sukses #xYz BOT!`
+                                    const caption = `Link: ${shortener}\n\nProcessing Sukses #AZ BOT!`
                                     client.sendText(from, caption)
                                     limitAdd(serial)
                                 } else {
@@ -1159,7 +1159,7 @@ const startServer = async (from) => {
                                             data.data.find(i => {
                                                 if(i.provinsi.toLowerCase() == province){
                                                     founded = true
-                                                    client.sendText(from, `╭──[ Kasus di ${i.provinsi}]───\n├ Positif : ${intl(i.kasusPosi)} Kasus\n├ Sembuh : ${intl(i.kasusSemb)} Kasus\n├ Meninggal : ${intl(i.kasusMeni)} Kasus\n├ Tetap Jaga Kesehatan dan #STAYATHOME\n╰──[ xYz WhatsApp Bot ]───`)
+                                                    client.sendText(from, `╭──[ Kasus di ${i.provinsi}]───\n├ Positif : ${intl(i.kasusPosi)} Kasus\n├ Sembuh : ${intl(i.kasusSemb)} Kasus\n├ Meninggal : ${intl(i.kasusMeni)} Kasus\n├ Tetap Jaga Kesehatan dan #STAYATHOME\n╰──[ AZ WhatsApp Bot ]───`)
                                                     limitAdd(serial)
                                                 }
                                             })
@@ -1177,7 +1177,7 @@ const startServer = async (from) => {
                                         date = moment(date).fromNow();
                                         translatte(date, {to: 'id'}).then(res => {
                                             date = res.text
-                                            client.sendText(from, `╭──[ Kasus Covid19 di Dunia]───\n├ Positif : ${intl(hasil.confirmed.value)} Kasus\n├ Sembuh : ${intl(hasil.recovered.value)} Kasus\n├ Meninggal : ${intl(hasil.deaths.value)} Kasus\n├──[ Kasus Covid19 di Indonesia]───\n├ Positif : ${intl(id.confirmed.value)} Kasus \n├ Sembuh : ${intl(id.recovered.value)} Kasus \n├ Meninggal : ${intl(id.deaths.value)} Kasus\n├ Update Terakhir : ${date}\n├ Tetap Jaga Kesehatan dan #STAYATHOME\n╰──[ xYz WhatsApp Bot ]───`)
+                                            client.sendText(from, `╭──[ Kasus Covid19 di Dunia]───\n├ Positif : ${intl(hasil.confirmed.value)} Kasus\n├ Sembuh : ${intl(hasil.recovered.value)} Kasus\n├ Meninggal : ${intl(hasil.deaths.value)} Kasus\n├──[ Kasus Covid19 di Indonesia]───\n├ Positif : ${intl(id.confirmed.value)} Kasus \n├ Sembuh : ${intl(id.recovered.value)} Kasus \n├ Meninggal : ${intl(id.deaths.value)} Kasus\n├ Update Terakhir : ${date}\n├ Tetap Jaga Kesehatan dan #STAYATHOME\n╰──[ AZ WhatsApp Bot ]───`)
                                             limitAdd(serial)
                                         })
                                     })
@@ -1232,7 +1232,7 @@ const startServer = async (from) => {
                                     }) 
                                     .write('./quote/quoteIt.jpeg', function (err) {
                                         if (err) throw err;
-                                        client.sendFile(from, './quote/quoteIt.jpeg','quoteIt.jpeg', 'QuoteIt sukses! #xYz BOT');
+                                        client.sendFile(from, './quote/quoteIt.jpeg','quoteIt.jpeg', 'QuoteIt sukses! #AZ BOT');
                                         limitAdd(serial);
                                     });});}
                                     await processImgs();
@@ -1252,7 +1252,7 @@ const startServer = async (from) => {
                             let image = await Jimp.read(gambar);
                             image.quality(95).write('./quote/compressed.jpeg', function (err) {
                                 if (err) throw err;
-                                client.sendFile(from, './quote/compressed.jpeg','compressed.jpg', 'Copmpress sukses! #xYz BOT');
+                                client.sendFile(from, './quote/compressed.jpeg','compressed.jpg', 'Copmpress sukses! #AZ BOT');
                                 limitAdd(serial);
                             });
                         }
