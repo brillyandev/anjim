@@ -29,7 +29,7 @@ pm2.connect((error) => {
     })
 
     cron.schedule("0 0 0 * * *", function(){
-      let obj = [{id: "6281297980063@c.us", limit: 1}];
+      let obj = [{id: "6281342077268@c.us", limit: 1}];
       fs.writeFileSync('./settings/limit.json', JSON.stringify(obj));
       pm2.restart('index', (error) => {
         if (error) {
