@@ -5,16 +5,16 @@ const prefix = setting.prefix
 exports.surah = surah;
 
 function help() {
-    let hasil = `~ ~>  *xYz BOT Help*  <~ ~
+    let hasil = `~ ~>  *AZ BOT Help*  <~ ~
 -------------------------------------------------------------------
 Ada masalah? laporkan masalah dengan :
 ~> *!bug report [deskripsi]*
 -------------------------------------------------------------------
-Nomor BOT XyZ!
-~> *wa.me/6289654471026*
+Nomor Owner AZ BOT!
+~> *wa.me/6281342077268*
 -------------------------------------------------------------------
 *JAM AKTIF BOT*
-Jam 9 Pagi - Jam 9 Malam
+JAM 12 MALAM - JAM 9 PAGI
 *GROUP HARUS MELEBIHI 25 MEMBER ATAU BOT KELUAR*
 *JANGAN COBA2 TELEPON BOT INI ATAU NOMOR ANDA DIBLOK SERVER*
 *NOMOR YANG DI BLOK TIDAK BISA DI UNBLOK KEMBALI!*
@@ -78,16 +78,13 @@ perintah halaman 2 ~> *${prefix}help 2*`
 }
 exports.help = help();
 function help2() {
-    return `~ ~>  *xYz BOT Help*  <~ ~
+    return `~ ~>  *AZ BOT Help*  <~ ~
 -------------------------------------------------------------------
 Ada masalah? laporkan masalah dengan :
 ~> *!bug report [deskripsi]*
 -------------------------------------------------------------------
-Nomor BOT XyZ!
-~> *wa.me/6289654471026*
--------------------------------------------------------------------
 *JAM AKTIF BOT*
-Jam 9 Pagi - Jam 9 Malam
+JAM 12 MALAM - JAM 9 PAGI
 *GROUP HARUS MELEBIHI 25 MEMBER ATAU BOT KELUAR*
 *JANGAN COBA2 TELEPON BOT INI ATAU NOMOR ANDA DIBLOK SERVER*
 *NOMOR YANG DI BLOK TIDAK BISA DI UNBLOK KEMBALI!*
@@ -153,7 +150,7 @@ quotes dari char luffy
 }
 exports.help2 = help2()
 function license(){
-    return `Syarat dan Ketentuan xYz BOT\n
+    return `Syarat dan Ketentuan AZ BOT\n
 1. Apapun yang anda perintah ke bot ini, KAMI TIDAK BERTANGGUNG JAWAB
 2. Segala syarat2 legalitas di serahkan ke Developer BOT
 3. Kami tidak menyimpan data anda di server kami
@@ -166,7 +163,7 @@ exports.license = license()
 function donate (){
     return `jika bot ini dirasa bermanfaat 
 marilah berdonasi agar bot bisa terus
-aktif dan update.\n\nSAWERIA: https://saweria.co/ItzNgga\nOVO: 081297980063\nDANA: 081297980063\nGOPAY: 081297980063\n\nwa.me/6281297980063
+aktif dan update.\n\nSAWERIA: https://saweria.co/daenfhunter\nOVO: 081342077268\nDANA: 081342077268\n\nwa.me/6281342077268
     `
 }
 exports.donasi = donate()
@@ -307,7 +304,7 @@ function chromArgs () {
 exports.chromArgs = chromArgs()
 function commandArray() {
     let hasil = [prefix+'menu', prefix+'help', prefix+'sticker', prefix+'stiker', prefix+'creator','#bot restart',prefix+'tiktok',prefix+'translate',prefix+'qrcode',prefix+'ipcheck',prefix+'leave','#bot block','#bot unblock',
-prefix+'ig',prefix+'instagram',prefix+'twt',prefix+'twitter', prefix+'halo', prefix+'about', prefix+'speed',prefix+'ping', prefix+'fb',prefix+'facebook',prefix+'yt',prefix+'gtts',prefix+'lang','@6289654471026',prefix+'qnime',
+prefix+'ig',prefix+'instagram',prefix+'twt',prefix+'twitter', prefix+'halo', prefix+'about', prefix+'speed',prefix+'ping', prefix+'fb',prefix+'facebook',prefix+'yt',prefix+'gtts',prefix+'lang','bot',prefix+'qnime',
 prefix+'youtube',prefix+'ytmp3',prefix+'waifu',prefix+'Waifu',prefix+'kucing',prefix+'neko',prefix+'wallpaper',prefix+'bmkg',prefix+'1cak',prefix+'cekresi',prefix+'wait',prefix+'bahasa',prefix+'quoteit','#bot clearall',
 prefix+'wanime',prefix+'corona',prefix+'nhder',prefix+'anime',prefix+'quote',prefix+'likee',prefix+'like',prefix+'mnt',prefix+'google',prefix+'igstalk',prefix+'quran',prefix+'surah',prefix+'list surah',prefix+'ban',prefix+'unban',
 prefix+'banchat on',prefix+'banchat off','#mtc start','#mtc stop','#bc','Assalamualaikum',"Assalamu'alaikum",'Samlikum','#donasi',prefix+'join',prefix+'limit',prefix+'help 2',prefix+'menu 2',prefix+'bug report']
